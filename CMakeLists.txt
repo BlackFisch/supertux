@@ -476,6 +476,9 @@ add_library(SDL_ttf_lib STATIC IMPORTED)
 set_target_properties(SDL_ttf_lib PROPERTIES IMPORTED_LOCATION "${SDL_TTF_PREFIX}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}SDL2_ttf${CMAKE_STATIC_LIBRARY_SUFFIX}")
 link_directories(${SDL_TTF_PREFIX}/lib)
 include_directories(SYSTEM ${SDL_TTF_PREFIX}/include/SDL2)
+if(RAQM_FOUND)
+  target_link_libraries(SDL2_ttf_lib INTERFACE ${RAQM_LIBRARIES})
+endif()
 
 ## Some additional include paths
 
