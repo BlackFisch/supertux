@@ -802,7 +802,7 @@ else()
 endif()
 
 if(RAQM_FOUND)
-  target_link_libraries(supertux2_lib PUBLIC ${RAQM_LIBRARY})
+  target_link_libraries(supertux2_lib PUBLIC ${RAQM_LIBRARIES})
 endif()
 
 target_link_libraries(supertux2_lib PUBLIC squirrel_lib)
